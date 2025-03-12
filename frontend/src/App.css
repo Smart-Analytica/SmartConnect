@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #EFF3F1; /* Light grayish-green background */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}

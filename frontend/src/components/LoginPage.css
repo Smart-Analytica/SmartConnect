@@ -1,0 +1,151 @@
+.login-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #e8eef0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.login-header h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: bold;
+  color: #1e2d2f;
+  margin: 0;
+}
+
+.login-form-container {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background: rgba(136, 201, 213, 0.5);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgb(25, 50, 29);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(91, 135, 143, 0.5);
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.back-btn, .login-btn {
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  background: rgba(29, 60, 66, 0.568);
+  color: rgb(198, 204, 199);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.login-btn:hover, .back-btn:hover {
+  background: rgba(60, 75, 75, 1);
+  transform: scale(1.05);
+}
+
+.login-background {
+  display: none;
+}
+
+.smart-labs-logo {
+  height: 40px;
+  filter: brightness(0) invert(0);
+}
+
+.smart-labs-logo:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .login-form-container {
+    padding: 40px;
+  }
+  
+  .login-background {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+  }
+  
+  .doctors-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-header {
+    padding: 15px;
+  }
+  
+  .login-header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .smart-labs-logo {
+    height: 30px;
+  }
+  
+  .login-form {
+    padding: 20px;
+  }
+  
+  .form-control {
+    padding: 12px;
+  }
+  
+  .back-btn, .login-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
